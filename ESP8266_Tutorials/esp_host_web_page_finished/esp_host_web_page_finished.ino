@@ -97,11 +97,12 @@ void loop()
     int connectionId = espSerial.read()-48; // subtract 48 because the read() function returns 
                       // the ASCII decimal value and 0 (the first decimal number) starts at 48
 
-    String webPage = "Run Time (M:S): ";
+    String webPage = "<!DOCTYPE html>\n<html><body>";
+    webPage += "Run Time (M:S): ";
     webPage += (millis()/60000);
     webPage += ":";
     webPage += ((millis() % 60000)/1000);
-    
+    webPage += "\n</body></html>";
       //send the web page
       const int dataLength = 2048;
       for(unsigned int i = 0; i < webPage.length(); i+= dataLength)
