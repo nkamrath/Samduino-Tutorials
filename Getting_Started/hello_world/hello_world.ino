@@ -1,8 +1,10 @@
 void setup() {
-  Serial.begin(9600);  //initialize the serial connection to the computer
+  //initialize the serial connection to the computer
+  Serial.begin(9600);
 }
 
 void loop() {
-  Serial.println("Hello World!");  //print the text "Hello World" to the computer via USB Serial
+  //print the text "Hello World" to the computer via USB Serial
+  Serial.println("Hello World!");
   delay(1000);  //delay one second
 }
